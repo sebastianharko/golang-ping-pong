@@ -1,6 +1,6 @@
-NAME=hello-world
-TAG=sebastianharko/golang-$(NAME)
-VER=v1.0
+NAME=ping-pong
+TAG=golang-$(NAME)
+VER=1.0
 
 all: clean build run
 
@@ -17,5 +17,5 @@ clean:
 	-docker rm $(NAME)
 
 push:
-	docker push $(TAG)
-	docker push $(TAG):$(VER)
+	docker tag $(TAG):$(VER) sebastianharko/$(TAG):$(VER)
+	docker push sebastianharko/$(TAG):$(VER)
