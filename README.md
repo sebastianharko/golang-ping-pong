@@ -1,6 +1,6 @@
 # Docker: sebastianharko/golang-ping-pong
 
-Simple Golang service that returns "Hello World!".
+Simple Golang service that returns "pong" when given "ping".
 
 # How to run it
 
