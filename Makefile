@@ -7,7 +7,7 @@ all: clean build run
 build:
 	go get github.com/gorilla/mux
 	CGO_ENABLED=0 GOOS=linux go build -ldflags "-s" -a -installsuffix cgo -o hello-world
-	docker build -t $(TAG) -t $(TAG):$(VER) .
+	docker build -t $(TAG):$(VER) .
 
 run:
 	docker run -d -p 80:80 -e PORT=80 --name=$(NAME) $(TAG)
